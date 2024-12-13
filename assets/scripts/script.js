@@ -11,6 +11,7 @@ startBtn.onclick = () => {
     ruleForm.classList.add('active');
     quizBox.classList.add('active');
     nextBtn.classList.add('active');
+    nextBtn.classList.remove('active');  
     questionCount++;
     showQuestions(questionCount);
    
@@ -24,14 +25,14 @@ const nextBtn = document.querySelector('.next-btn');
 
     
 nextBtn.onclick = () => {
-    if (questionCount <questions.length - 1) {
+    if (questionCount <questions.length  - 1) {
         questionCount++;
         showQuestions(questionCount);
 
         questionNumb++;
         questionCounter(questionNumb);
 
-        
+        nextBtn.classList.remove('active');      
     }
     else {
 
